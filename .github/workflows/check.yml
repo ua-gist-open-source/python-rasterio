@@ -1,0 +1,72 @@
+name: Check for required files
+
+on:
+  push:
+    branches: [ rasterio ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check stac-items.png
+        id: check_1_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "stac-items.png"
+
+      - name: Required files exist
+        if: steps.check_1_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'stac-items.py', is missing
+          exit 1
+          
+      - name: Check image-numpy.png
+        id: check_2_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "image-numpy.png"
+
+      - name: Required files exist
+        if: steps.check_2_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'image-numpy.png', is missing
+          exit 1
+          
+          
+      - name: Check image-plots.png
+        id: check_3_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "image-plots.png"
+
+      - name: Required files exist
+        if: steps.check_3_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'image-plots.png', is missing
+          exit 1
+
+      - name: Check fields.png
+        id: check_4_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "fields.png"
+
+      - name: Required files exist
+        if: steps.check_4_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'fields.png', is missing
+          exit 1
+
+      - name: Check ndvi-time-series.png
+        id: check_5_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "ndvi-time-series.png"
+
+      - name: Required files exist
+        if: steps.check_5_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'ndvi-time-series.png', is missing
+          exit 1
