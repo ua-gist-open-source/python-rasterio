@@ -22,7 +22,24 @@ Background reading:
 3) Learn about Spatio-Temporal Asset Catalogs (STACs)
 
 ## Get started with your codespace
-This assignment will be conducted through your codespace for this repo. Create a new branch, `rasterio`, and create a new codespace for this branch. The instructions for the assignment can be found in the Jupyter Notebook, `assignment.ipynb`.
+This assignment will be conducted through your codespace for this repo. 
+
+1) Create a new branch, `rasterio`
+2) Create a special codespace (see instructions below). If you don't select a larger machine type the codespace will crash on start and enter recovery mode.
+The default codespace machine type does not have enough disk space to run this assignment so you will need to select a larger machine type.
+Click on the "Code" icon and select the hamburger icon (...) to open a dialog to create a new codespace with options:
+
+   ![codespace-hamburger](./media/codespace-hamburger.png)
+
+Next, change the machine type to `16-core`:
+
+ ![codespace-machine-type](./media/codespace-machine-type.png)
+
+Finally, click "Create codespace"
+
+It will take several minutes for this codespace to be created because it is custom and needs to build itself first.
+
+4) The instructions for the assignment can be found in the Jupyter Notebook, `assignment.ipynb`.
 
 ## Deliverables
 Submit a pull request to merge your `rasterio` branch with `master` (but do not merge). The `rasterio` branch should include:
