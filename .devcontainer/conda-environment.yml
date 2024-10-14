@@ -1,0 +1,10 @@
+name: geo-python-38
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - geopandas 
+  - sat-search 
+  - rasterio 
+  - notebook 
+  - ipykernel
